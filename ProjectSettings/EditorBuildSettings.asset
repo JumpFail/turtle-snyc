@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/leroy/UI Start Menu/UI Start Menu/Assets/Scenes/Menu.unity
+    guid: d6f1f8722f773304787c33145a6f03b7
+  - enabled: 1
+    path: Assets/leroy/UI Start Menu/Assets/Scenes/Menu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/leroy/UI Start Menu/Assets/Scenes/LoadingScreen.unity
+    guid: cb267bbf2b8f05944b70bc207135d800
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 4ef7fd1f451106049b82333bc708556d
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: d69baa56ceec21842ada7905d5708510
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 697c1dc67843e7c41aff18eba34fb8c0
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 8845409c53753744c9919e7d899aab12
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: b8c30817b4c3388469e1860cd0f0b4a4
+  - enabled: 1
+    path: Assets/Scenes/Beginning.unity
+    guid: 7d0dc65814cc3234dbbeb91e72026ea7
+  - enabled: 0
+    path: Assets/Assets nerick/Scenes/difficult.unity
+    guid: b3b4ae4ec0113ce4cb0162440aad4ae2
+  - enabled: 0
+    path: Assets/Assets nerick/Scenes/SampleScene.unity
+    guid: bd3e0a02a7251fb458bd98d299ce7757
+  - enabled: 0
+    path: Assets/Assets nerick/Scenes/onother.unity
+    guid: e5021b7506760d1498330e5384c82b95
+  - enabled: 0
+    path: Assets/Scenes/Tutorial 1.unity
+    guid: b2f9c8a13b1da9b49a0cb07f4c21ff0d
+  m_configObjects: {}
