@@ -39,14 +39,7 @@ public class MAINMOVE : MonoBehaviour
         ApplyGravity();
 
         // Update animator parameters
-        if (Mathf.Abs(moveX) > 0.01f)
-        {
-            animator.SetBool("isWalking", true);
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
-        }
+        animator.SetBool("isWalking", Mathf.Abs(moveX) > 0.01f);
     }
 
     void MovePlayer(Vector3 movement)

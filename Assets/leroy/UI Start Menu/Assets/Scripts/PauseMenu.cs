@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject optionsMenu; // assign your Options panel here
     public bool isPaused;
+    private bool inOptionsMenu = false;
 
     public AudioSource gameplayMusic;
     public AudioSource pauseMusic;
@@ -12,17 +14,25 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
-        pauseMusic.Stop(); // make sure pause music isn't playing
+        optionsMenu.SetActive(false);
+        pauseMusic.Stop(); // ensure pause music isn't playing
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
-                ResumeGame();
+            if (inOptionsMenu)
+            {
+                CloseOptionsMenu();
+            }
             else
-                PauseGame();
+            {
+                if (isPaused)
+                    ResumeGame();
+                else
+                    PauseGame();
+            }
         }
     }
 
@@ -40,12 +50,14 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
         Time.timeScale = 1f;
 
         pauseMusic.Stop();
         gameplayMusic.UnPause();
 
         isPaused = false;
+        inOptionsMenu = false;
     }
 
     public void GoToMainMenu()
@@ -56,5 +68,17 @@ public class PauseMenu : MonoBehaviour
         gameplayMusic.Stop();
 
         SceneManager.LoadScene("Menu");
+    }
+
+    public void OpenOptionsMenu()
+    {
+        optionsMenu.SetActive(true);
+        inOptionsMenu = true;
+    }
+
+    public void CloseOptionsMenu()
+    {
+        optionsMenu.SetActive(false);
+        inOptionsMenu = false;
     }
 }
